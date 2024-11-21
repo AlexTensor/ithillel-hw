@@ -1,0 +1,54 @@
+* {
+    font-size: 26px;
+}
+
+ul > li {
+    color: aqua;
+}
+
+ul > li:nth-child(even) {
+    color: red
+}
+ol > li:first-child{
+    color: blue;
+}
+#list {
+    color: #56e858;
+}
+
+h2 {
+    color: green;
+}
+
+.container > p {
+    color: yellow;
+}
+
+.header + p {
+    color: blue;
+}
+
+.container p:last-of-type {
+    color: #b430cf;
+}
+
+div a[href$=".jpg"]{
+    color: firebrick;
+}
+
+div a[href^="https"]{
+    color: forestgreen;
+}
+
+div a[href$=".jpg"]:hover{
+    color: #fa0000;
+}
+
+div a[href$=".jpg"]:hover::after {
+    content: " <-";
+}
+
+i ~ span {
+    color: royalblue;
+}
+
