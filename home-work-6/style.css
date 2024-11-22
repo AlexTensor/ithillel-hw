@@ -15,3 +15,24 @@ table {
 table td {
     border: 1px solid black;
 }
+
+caption {
+    margin-block: 10px;
+    font-size: 30px;
+}
+
+.yellow {
+    background-color: #FFD915;
+}
+
+.red {
+    background-color: #F7150B;
+}
+
+.blue {
+    background-color: #0D0AB6;
+}
+
+.black {
+    background-color: #000000;
+}
