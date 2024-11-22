@@ -4,7 +4,7 @@
 }
 .container {
     margin-inline: auto;
-    width: min(100% - 60px, 960px);
+    width: 500px;
 }
 
 table {
@@ -13,7 +13,8 @@ table {
     width: 100%;
 }
 table td {
-    border: 1px solid black;
+    border: 8px solid black;
+    height: 60px;
 }
 
 caption {
@@ -35,4 +36,15 @@ caption {
 
 .black {
     background-color: #000000;
+}
+
+.width-60 {
+    width: 60px;
+}
+
+.width-40 {
+    width: 40px;
+}
+.height-40 {
+    height: 40px;
 }
