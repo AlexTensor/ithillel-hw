@@ -26,11 +26,11 @@
     border: 3px solid black;
     display: inline-block;
 }
-.css-display .css-cont.css-cont-box{
+.css-display .css-cont.css-cont-box {
     box-sizing: border-box;
     font-size: 20px;
 }
-.floats .float{
+.floats .float {
     width: 200px;
     height: 200px;
     background-color: lightcoral;
@@ -38,8 +38,20 @@
     margin: 10px;
     float: left;
 }
-.clearfix{
+.floats .float:nth-child(7){ /*Why doesn't last-child work?*/
+    float: right;
+}
+.clearfix {
     content: "";
     clear: both;
     display: table;
+}
+.overflows .overflow-y {
+    height: 300px;
+    overflow-y: auto;
+}
+
+.overflows .overflow-auto {
+    overflow: auto;
+    white-space: nowrap;
 }
