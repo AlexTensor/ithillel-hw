@@ -1,0 +1,45 @@
+.container > div {
+    border: 3px dashed black;
+    margin-block: 10px;
+    padding: 10px;
+}
+.container-tags p {
+    color: red;
+}
+
+.container-tags p span{
+    color: blue;
+    font-style: italic;
+}
+
+.css-display a {
+    display: block;
+    padding: 20px;
+    background-color: yellow;
+    margin-bottom: 20px;
+}
+
+.css-display .css-cont {
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
+    border: 3px solid black;
+    display: inline-block;
+}
+.css-display .css-cont.css-cont-box{
+    box-sizing: border-box;
+    font-size: 20px;
+}
+.floats .float{
+    width: 200px;
+    height: 200px;
+    background-color: lightcoral;
+    border: 3px solid black;
+    margin: 10px;
+    float: left;
+}
+.clearfix{
+    content: "";
+    clear: both;
+    display: table;
+}
