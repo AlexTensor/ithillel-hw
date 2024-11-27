@@ -1,0 +1,23 @@
+body {
+    font-size: 30px;
+    margin: 0;
+}
+
+.container {
+    margin-inline: auto;
+    max-width: 1200px
+}
+.menu li {
+    display: inline;
+    vertical-align: baseline;
+    line-height: 0;
+    margin: 0 20px;
+}
+.menu {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+    background-color: #b3d4fc;
+    position: sticky;
+    top: 0;
+}
