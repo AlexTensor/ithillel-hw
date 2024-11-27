@@ -55,3 +55,29 @@
     overflow: auto;
     white-space: nowrap;
 }
+
+.positions .position {
+    width: 500px;
+    height: 500px;
+    float: left;
+    border: 3px solid black;
+    margin: 10px;
+}
+.positions .position:nth-child(odd) {
+   background-color: #b430cf;
+}
+.positions .position:nth-child(even) {
+    background-color: red;
+}
+
+
+.positions {
+    position: relative;
+}
+.positions .position:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
