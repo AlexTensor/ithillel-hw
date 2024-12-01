@@ -1,0 +1,8 @@
+.container {
+    max-width: 1200px;
+    margin-inline: auto;
+}
+.container__float {
+    border: 2px dotted black;
+    margin-bottom: 20px;
+}
