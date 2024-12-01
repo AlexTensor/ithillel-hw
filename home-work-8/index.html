@@ -7,11 +7,43 @@
   </head>
   <body>
     <div class="container">
-      <div class="container__float">1</div>
-      <div class="container__float">2</div>
-      <div class="container__float">3</div>
-      <div class="container__float">4</div>
-      <div class="container__float">5</div>
+      <div class="container__float">
+        <div class="container__float--element float-left"></div>
+        <div class="container__float--element float-right"></div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="container__float">
+        <div class="container__float--element float-left"></div>
+        <div class="container__float--element float-right margin-left"></div>
+        <div class="container__float--element float-right margin-left"></div>
+        <div class="container__float--element float-right"></div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="container__float">
+        <div class="container__float--element float-left margin-right"></div>
+        <div class="container__float--element float-left"></div>
+        <div class="container__float--element float-right margin-left"></div>
+        <div class="container__float--element float-right"></div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="container__float">
+        <div class="container__float--element reset float-right margin-left">
+          <div class="container__float--element margin-bottom"></div>
+          <div class="container__float--element"></div>
+        </div>
+        <div class="container__float--element big-size float-right"></div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="container__float">
+        <div class="container__float--wrapper">
+          <div class="container__float--element big-size float-left"></div>
+          <div class="container__float--element reset float-right">
+            <div class="container__float--element margin-bottom"></div>
+            <div class="container__float--element"></div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

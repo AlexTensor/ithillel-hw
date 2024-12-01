@@ -1,8 +1,51 @@
+* {
+    box-sizing: border-box;
+}
 .container {
     max-width: 1200px;
     margin-inline: auto;
 }
 .container__float {
-    border: 2px dotted black;
+    border: 4px dotted black;
     margin-bottom: 20px;
+    padding: 20px;
+}
+.container__float--element {
+    width: 200px;
+    height: 60px;
+    border: 2px solid black;
+    background-color: lightblue;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.margin-left {
+    margin-left: 10px;
+}
+.margin-right {
+    margin-right: 10px;
+}
+.clearfix{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.big-size{
+    height: 130px;
+}
+.margin-bottom {
+    margin-bottom: 10px;
+}
+.reset {
+    height: auto;
+    border: none;
+    background-color: transparent;
+}
+.container__float--wrapper{
+    width: 410px;
+    margin-inline: auto;
 }
