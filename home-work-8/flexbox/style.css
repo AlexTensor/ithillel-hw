@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+.container {
+    max-width: 1200px;
+    margin-inline: auto;
+}
+.container__flex {
+    border: 4px dotted black;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+
+}
+.container__flex--element {
+    width: 200px;
+    height: 60px;
+    border: 2px solid black;
+    background-color: lightblue;
+}
+.space-between {
+    justify-content: space-between;
+}
+.flex{
+    display: flex;
+}
+.margin-left {
+    margin-left: 10px;
+}
+.big-size{
+    height: 130px;
+}
+.flex-end {
+    justify-content: flex-end;
+}
+.flex-column {
+    flex-direction: column;
+}
+.center {
+    justify-content: center;
+}
