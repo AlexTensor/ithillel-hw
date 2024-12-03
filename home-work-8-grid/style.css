@@ -8,7 +8,7 @@
     max-width: 1200px;
     margin-inline: auto;
     display: grid;
-    grid-template-rows: 30px repeat(2, 200px) 100px 160px;
+    grid-template-rows: 30px repeat(2, 250px) 100px 160px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
         "header-top header-top header-top"
@@ -22,28 +22,60 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
 }
 
 .container__header--top {
     grid-area: header-top;
-
+    background-color: #62A0DF;
 }
 .container__header--bottom {
     grid-area: header-bottom;
+    background-color: #BADCFC;
 }
 .container__feature-yellow {
     grid-area: feature-yellow;
+    background-color: #F6D497;
 }
 .container__feature-purple {
     grid-area: feature-purple;
+    background-color: #BCBAE1;
 }
 .container__feature-red {
     grid-area: feature-red;
+    background-color: #F0A4A7;
 }
 .container__sign-up {
     grid-area: sign-up;
+    background-color: #D6D8DA;
 }
 .container__content {
     grid-area: contenti;
+    background-color: #f4f4f4;
 }
+@media screen and (max-width: 1000px) {
+    .container {
+        grid-template-rows: 30px 200px 250px 200px 200px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        "header-top header-top"
+        "header-bottom header-bottom"
+        "contenti contenti"
+        "sign-up feature-yellow"
+        "feature-red feature-purple"
+    }
+}
+@media screen and (max-width: 600px) {
+        .container {
+            grid-template-rows: 30px 200px 250px repeat(4, 150px);
+            grid-template-columns: 1fr;
+            grid-template-areas:
+            "header-top"
+            "header-bottom"
+            "contenti"
+            "sign-up"
+            "feature-yellow"
+            "feature-red"
+            "feature-purple"
+        }
+}
+
