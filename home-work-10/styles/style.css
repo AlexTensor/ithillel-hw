@@ -133,5 +133,100 @@ body {
     font-weight: 400;
     color: #ffffff;
 }
+@media (max-width: 375px) {
+    html {
+        font-size: 10px;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 300px 1fr;
+        grid-template-rows: repeat(5, auto);
+    }
 
+    [class$="__grid"], .header__grid .main-about__grid {
+        padding-block: 20px;
+    }
+    .header__navigation ol {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 20px;
+        justify-content: space-between;
+    }
 
+    .header__navigation ol li a{
+        font-size: 0.8rem;
+    }
+    .header__navigation ol li {
+        border: 1px solid black;
+        border-radius: 2px;
+        padding: 2px;
+    }
+
+    .header__content h1{
+        font-size: 3rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .header__content p, .main__about p, .main__present p{
+        color: var(--paragraph-color);
+        line-height: 2rem;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .header__content button {
+        font-size: 2rem;
+        padding-block: 5px;
+        padding-inline: 10px;
+        margin: 0 auto;
+        display: block;
+        border-radius: 5px;
+    }
+
+    .main__about h2, .main__present h2{
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    .main__projects ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .main__projects h3 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .main__projects p {
+        font-size: 1rem;
+        text-align: center;
+    }
+    .main__projects li div{
+        margin-left: 0;
+    }
+    .main__projects li{
+        position: static;
+    }
+    .main__projects li::before{
+        display: none;
+    }
+
+    .main__present h2 {
+        padding-bottom: 0;
+    }
+
+    .main__video {
+        display: none;
+    }
+    .footer__grid h3 {
+        font-size: 2rem;
+        padding-bottom: 5px;
+    }
+    .footer__grid p {
+        font-size: 1rem;
+    }
+}
