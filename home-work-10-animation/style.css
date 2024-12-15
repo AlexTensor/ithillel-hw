@@ -16,7 +16,7 @@
     height: 175px;
     flex-wrap: nowrap;
     align-items: stretch;
-    animation: move 2s infinite linear;
+    animation: move 3s infinite linear;
 
 }
 .slider:hover .container {
