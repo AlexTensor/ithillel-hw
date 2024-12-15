@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+    --primary-background: #EEEFF1;
+    --secondary-background: #34547A;
+    --primary-font: 'Roboto';
+    --paragraph-color: #727272;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--primary-font), sans-serif;
+    min-width: 320px;
+}
+
+html {
+    font-size: 16px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1100px 1fr;
+    grid-template-rows: repeat(5, auto);
+}
+[class$="__grid"] {
+    padding-block: 100px;
+}
+.header__grid {
+    background-color: var(--primary-background);
+    padding-block: 79px 141px;
+}
+.main-projects__grid {
+    background-color: var(--secondary-background);
+}
+.footer__grid {
+    background-color: var(--secondary-background);
+}
+.header__navigation ol {
+    display: flex;
+    gap: 42px;
+    margin-bottom: 162px
+}
+.header__navigation ol li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: 0.1em;
+}
+
+.header__navigation ol li a:hover{
+    color: #34547A;
+    font-weight: 500;
+}
+.header__content h1{
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 60px;
+}
+.header__content p, .main__about p, .main__present p{
+    color: var(--paragraph-color);
+    width: 540px;
+    line-height: 26px;
+    margin-bottom: 65px;
+    font-weight: 400;
+}
+
+.header__content button {
+    background-color: var(--secondary-background);
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    padding-block: 19px 20px;
+    padding-inline: 41px;
+}
+.main__about, .main__present{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__about p, .main__present p{
+    text-align: center;
+}
+.main__about h2, .main__present h2{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+.main-about__grid{
+    padding-top: 112px;
+}
+
+.main__projects ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__projects h3 {
+    color: #ffffff;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+.main__projects p {
+    color: #ffffff;
+    font-size: 16px;
+}
+.main__projects li div{
+    margin-left: 70px;
+}
+.main__projects li{
+    position: relative;
+}
+.main__projects li::before{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-image: url("../images/icon.svg");
+    top: 0;
+    left: 0;
+}
+.main__present h2{
+    padding-bottom: 57px;
+}
+
+.main__video iframe {
+    width: 1100px;
+    height: 600px;
+}
+
+.footer__grid h3 {
+    font-size: 21px;
+    font-weight: 500;
+    color: #ffffff;
+    padding-bottom: 20px;
+}
+.footer__grid p {
+    font-size: 13px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+@media (max-width: 1150px) {
+    [class$="__grid"]{
+        padding: 5%;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 100% 1fr;
+        grid-template-rows: repeat(5, auto);
+    }
+
+    .main__video iframe {
+        width: 100%;
+        height: 600px;
+    }
+}
+
+@media (max-width: 930px){
+
+
+    .main__video iframe {
+        height: auto;
+    }
+
+    .header__navigation ol {
+        display: flex;
+        gap: 0.6rem;
+        margin-bottom: 20px;
+        justify-content: space-between;
+    }
+
+    .header__navigation ol li a{
+        vertical-align: middle;
+        font-size: 0.65rem;
+    }
+
+    .header__content h1{
+        font-size: 2.1rem;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .header__content p, .main__about p, .main__present p{
+        color: var(--paragraph-color);
+        line-height: 1.3rem;
+        margin-bottom: 30px;
+        text-align: center;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .header__content button {
+        font-size: 1.2rem;
+        padding-block: 6px;
+        padding-inline: 12px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .main__about h2, .main__present h2{
+        font-size: 1.6rem;
+        margin-bottom: 22px;
+    }
+
+    .main__projects ul {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1.2rem;
+    }
+
+    .main__projects h3 {
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+    .main__projects p {
+        font-size: 1rem;
+        text-align: center;
+    }
+    .main__projects li div{
+        margin-left: 0;
+    }
+    .main__projects li{
+        position: static;
+    }
+    .main__projects li::before{
+        display: none;
+    }
+
+    .main__present h2 {
+        padding-bottom: 0;
+    }
+
+    .footer__grid h3 {
+        font-size: 1.5rem;
+        padding-bottom: 5px;
+    }
+    .footer__grid p {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 375px) {
+
+    [class$="__grid"] {
+        padding-block: 20px;
+        padding-inline: 0;
+    }
+
+    .header__navigation ol li a{
+        font-size: 0.5rem;
+    }
+    .header__navigation ol li {
+        padding: 2px;
+    }
+
+    .header__content h1{
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .header__content p, .main__about p, .main__present p{
+        color: var(--paragraph-color);
+        line-height: 1.2rem;
+        margin-bottom: 20px;
+        font-size: 0.8rem;
+    }
+
+    .header__content button {
+        font-size: 1rem;
+        padding-block: 5px;
+        padding-inline: 10px;
+    }
+
+    .main__about h2, .main__present h2{
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    .main__projects ul {
+        gap: 1rem;
+    }
+
+    .main__projects h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .main__video {
+        display: none;
+    }
+}
+
+
+
+
