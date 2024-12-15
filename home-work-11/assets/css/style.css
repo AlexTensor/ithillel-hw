@@ -402,16 +402,13 @@ html{
     height:auto;
   }
   .header__navigation ol{
-    display:-webkit-box;
-    display:-ms-flexbox;
-    display:flex;
     gap:0.6rem;
     margin-bottom:20px;
     -webkit-box-pack:justify;
         -ms-flex-pack:justify;
             justify-content:space-between;
   }
-  .header__navigation ol li a{
+  .header__navigation ol a{
     vertical-align:middle;
     font-size:0.65rem;
   }
@@ -420,7 +417,7 @@ html{
     margin-bottom:30px;
     text-align:center;
   }
-  .header__content p, .main__about p, .main__present p{
+  .header__content p{
     color:#727272;
     line-height:1.3rem;
     margin-bottom:30px;
@@ -435,7 +432,28 @@ html{
     margin:0 auto;
     display:block;
   }
+  .main__about p, .main__present p{
+    color:#727272;
+    line-height:1.3rem;
+    margin-bottom:30px;
+    text-align:center;
+    width:100%;
+    font-size:1rem;
+  }
   .main__about h2, .main__present h2{
+    font-size:1.6rem;
+    margin-bottom:22px;
+  }
+  .main__present p{
+    color:#727272;
+    line-height:1.3rem;
+    margin-bottom:30px;
+    text-align:center;
+    width:100%;
+    font-size:1rem;
+  }
+  .main__present h2{
+    padding-bottom:0;
     font-size:1.6rem;
     margin-bottom:22px;
   }
@@ -459,17 +477,14 @@ html{
     font-size:1rem;
     text-align:center;
   }
-  .main__projects li div{
-    margin-left:0;
-  }
   .main__projects li{
     position:static;
   }
+  .main__projects li div{
+    margin-left:0;
+  }
   .main__projects li::before{
     display:none;
-  }
-  .main__present h2{
-    padding-bottom:0;
   }
   .footer__grid h3{
     font-size:1.5rem;
@@ -485,28 +500,44 @@ html{
     padding-block:20px;
     padding-inline:0;
   }
-  .header__navigation ol li a{
-    font-size:0.5rem;
-  }
   .header__navigation ol li{
     padding:2px;
+  }
+  .header__navigation ol li a{
+    font-size:0.5rem;
   }
   .header__content h1{
     font-size:2rem;
     margin-bottom:20px;
-  }
-  .header__content p, .main__about p, .main__present p{
-    color:#727272;
-    line-height:1.2rem;
-    margin-bottom:20px;
-    font-size:0.8rem;
   }
   .header__content button{
     font-size:1rem;
     padding-block:5px;
     padding-inline:10px;
   }
+  .header__content p{
+    color:#727272;
+    line-height:1.2rem;
+    margin-bottom:20px;
+    font-size:0.8rem;
+  }
+  .main__about p, .main__present p{
+    color:#727272;
+    line-height:1.2rem;
+    margin-bottom:20px;
+    font-size:0.8rem;
+  }
   .main__about h2, .main__present h2{
+    font-size:1.5rem;
+    margin-bottom:20px;
+  }
+  .main__present p{
+    color:#727272;
+    line-height:1.2rem;
+    margin-bottom:20px;
+    font-size:0.8rem;
+  }
+  .main__present h2{
     font-size:1.5rem;
     margin-bottom:20px;
   }
