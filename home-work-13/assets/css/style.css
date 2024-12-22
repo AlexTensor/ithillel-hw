@@ -1,0 +1,40 @@
+*{
+  -webkit-box-sizing:border-box;
+          box-sizing:border-box;
+}
+
+svg{
+  border:1px solid black;
+}
+
+.sq{
+  fill:#30cf38;
+  stroke-width:5px;
+  stroke:#62A0DF;
+}
+
+.rect{
+  fill:#62A0DF;
+  stroke-width:5px;
+  stroke:#30cf38;
+}
+
+circle{
+  fill:#1b3b59;
+  stroke-width:5px;
+  stroke:#cb56ff;
+}
+
+ellipse{
+  fill:#1105ef;
+  stroke-width:5px;
+  stroke:#ff5656;
+  -webkit-transition:all 1s ease-out;
+  transition:all 1s ease-out;
+}
+
+ellipse:hover{
+  fill:#6de692;
+  stroke:#eff62a;
+  stroke-width:8px;
+}
