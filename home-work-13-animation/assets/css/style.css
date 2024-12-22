@@ -14,9 +14,6 @@
   -webkit-box-pack:center;
       -ms-flex-pack:center;
           justify-content:center;
-  -webkit-box-align:center;
-      -ms-flex-align:center;
-          align-items:center;
 }
 
 .circle{
@@ -34,27 +31,19 @@
     -webkit-transform:translate(0, 0);
             transform:translate(0, 0);
   }
-  17%{
-    -webkit-transform:translate(200px, 215px);
-            transform:translate(200px, 215px);
+  25%{
+    -webkit-transform:translate(365px, 215px);
+            transform:translate(365px, 215px);
   }
-  34%{
-    -webkit-transform:translate(365px, 0);
-            transform:translate(365px, 0);
+  50%{
+    -webkit-transform:translate(0, 430px);
+            transform:translate(0, 430px);
   }
-  51%{
-    -webkit-transform:translate(0, -215px);
-            transform:translate(0, -215px);
+  75%{
+    -webkit-transform:translate(-365px, 215px);
+            transform:translate(-365px, 215px);
   }
-  68%{
-    -webkit-transform:translate(-365px, 0);
-            transform:translate(-365px, 0);
-  }
-  80%{
-    -webkit-transform:translate(-200px, 215px);
-            transform:translate(-200px, 215px);
-  }
-  to{
+  100%{
     -webkit-transform:translate(0, 0);
             transform:translate(0, 0);
   }
@@ -65,27 +54,19 @@
     -webkit-transform:translate(0, 0);
             transform:translate(0, 0);
   }
-  17%{
-    -webkit-transform:translate(200px, 215px);
-            transform:translate(200px, 215px);
+  25%{
+    -webkit-transform:translate(365px, 215px);
+            transform:translate(365px, 215px);
   }
-  34%{
-    -webkit-transform:translate(365px, 0);
-            transform:translate(365px, 0);
+  50%{
+    -webkit-transform:translate(0, 430px);
+            transform:translate(0, 430px);
   }
-  51%{
-    -webkit-transform:translate(0, -215px);
-            transform:translate(0, -215px);
+  75%{
+    -webkit-transform:translate(-365px, 215px);
+            transform:translate(-365px, 215px);
   }
-  68%{
-    -webkit-transform:translate(-365px, 0);
-            transform:translate(-365px, 0);
-  }
-  80%{
-    -webkit-transform:translate(-200px, 215px);
-            transform:translate(-200px, 215px);
-  }
-  to{
+  100%{
     -webkit-transform:translate(0, 0);
             transform:translate(0, 0);
   }

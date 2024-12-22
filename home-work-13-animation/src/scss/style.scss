@@ -10,7 +10,6 @@
   background-color: #d1d1d1;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 .circle {
   border-radius: 50%;
@@ -25,27 +24,17 @@
   0% {
     transform: translate(0, 0);
   }
-  17% {
-    transform: translate(200px, 215px);
+  25% {
+    transform: translate(365px, 215px);
+  }
+  50% {
+    transform: translate(0, 430px);
+  }
+  75% {
+    transform: translate(-365px, 215px);
   }
 
-  34%{
-    transform: translate(365px, 0);
-  }
-
-  51%{
-    transform: translate(0, -215px);
-  }
-
-  68%{
-    transform: translate(-365px, 0);
-  }
-
-  80%{
-    transform: translate(-200px, 215px);
-  }
-
-  to {
+  100% {
     transform: translate(0, 0);
   }
 }
