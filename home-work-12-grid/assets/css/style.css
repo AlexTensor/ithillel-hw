@@ -10,11 +10,12 @@
 
 .container{
   display:grid;
-  grid-template-columns:repeat(7, 1fr);
-  grid-template-rows:repeat(7, 20px);
+  grid-template-columns:60px 50px 60px 90px 60px 60px 1fr;
+  grid-template-rows:60px 80px 90px 40px 40px 40px 40px;
+  border:4px solid black;
 }
 .container div{
-  border:2px solid black;
+  border:4px solid black;
 }
 .container .cell1{
   grid-column:span 2;
@@ -24,16 +25,19 @@
 }
 .container .cell3{
   grid-column:span 2;
+  background-color:#FFD915;
 }
 .container .cell4{
   grid-row:span 4;
 }
 .container .cell6{
-  grid-column:span 3;
   grid-row:span 2;
+  grid-column:span 3;
+  background-color:#F7150B;
 }
 .container .cell7{
   grid-column:span 2;
+  background-color:#FFD915;
 }
 .container .cell8{
   grid-row:span 2;
@@ -41,6 +45,7 @@
 .container .cell11{
   grid-row:span 2;
   grid-column:span 2;
+  background-color:#000000;
 }
 .container .cell13{
   grid-column:span 2;
@@ -48,13 +53,23 @@
 .container .cell16{
   grid-row:span 2;
   grid-column:span 2;
+  background-color:#0D0AB6;
+}
+.container .cell17{
+  grid-row:span 3;
+  background-color:#F7150B;
 }
 .container .cell14{
   grid-row:span 3;
+  background-color:#FFD915;
 }
 .container .cell18{
   grid-row:span 2;
+  grid-column:span 2;
 }
-.container .cell23{
+.container .cell19{
+  background-color:#000000;
+}
+.container .cell20{
   grid-column:span 3;
 }
