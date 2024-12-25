@@ -11,15 +11,125 @@
 
     <div class="container">
       <div class="row mb-1">
-        <div class="col-12 border border-primary-subtle">Header</div>
+        <div class="col-12">
+          <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="images/logo.svg" alt="logo" width="50"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">My orders</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pictures</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Show more
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Contacts</a></li>
+                      <li><a class="dropdown-item" href="#">Map</a></li>
+                      <li><a class="dropdown-item" href="#">Sing in</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
       </div>
       <div class="row mb-1 justify-content-between">
-        <div class="col-2 border border-primary-subtle">Left</div>
-        <div class="col-6 border border-primary-subtle">Middle</div>
-        <div class="col-2 border border-primary-subtle">Right</div>
+        <div class="col-lg-3 col-md-4 mb-1 mb-lg-0">
+          <div id="mySlider" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/image1.jpg" class="d-block w-100" alt="image1">
+              </div>
+              <div class="carousel-item">
+                <img src="images/image2.jpg" class="d-block w-100" alt="image2">
+              </div>
+              <div class="carousel-item">
+                <img src="images/image3.jpg" class="d-block w-100" alt="image3">
+              </div>
+              <div class="carousel-item">
+                <img src="images/image4.jpg" class="d-block w-100" alt="image4">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mySlider" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mySlider" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-8 mb-1 mb-lg-0">
+          <div class="accordion accordion-flush" id="myAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Title 1
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                <div class="accordion-body">The orange cat leapt gracefully onto the windowsill, its tail swaying like a pendulum in the afternoon sunlight.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Title 2
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                <div class="accordion-body">A sudden crack of thunder startled everyone in the room, signaling the start of an unexpected summer storm.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Title 3
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                <div class="accordion-body">A sudden crack of thunder startled everyone in the room, signaling the start of an unexpected summer storm.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                  Title 4
+                </button>
+              </h2>
+              <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                <div class="accordion-body">Beneath the ancient oak tree, a small notebook lay forgotten, its pages fluttering in the gentle breeze.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                  Title 5
+                </button>
+              </h2>
+              <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                <div class="accordion-body">As the spaceship approached the distant planet, the crew marveled at the shimmering rings encircling its surface.3d-logo-3.svg</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-12">Right</div>
       </div>
       <div class="row">
-        <div class="col-12 border border-primary-subtle">Footer</div>
+        <div class="col-12">Footer</div>
       </div>
     </div>
 
