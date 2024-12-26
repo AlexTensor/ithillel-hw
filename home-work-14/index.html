@@ -8,7 +8,7 @@
   </head>
   <body>
 
-    <div class="container">
+    <div class="container-fluid">
       <div class="row mb-1">
         <div class="col-12">
           <nav class="navbar navbar-expand-sm">
@@ -44,7 +44,7 @@
           </nav>
         </div>
       </div>
-      <div class="row mb-1 justify-content-between">
+      <div class="row mb-1">
         <div class="col-lg-3 col-md-4 mb-1 mb-lg-0">
           <div id="mySlider" class="carousel slide">
             <div class="carousel-inner">
@@ -125,10 +125,38 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-12">Right</div>
+        <div class="col-lg-3 col-md-12 mb-1">
+          <form>
+            <div class="mb-2">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="getnews">
+              <label class="form-check-label" for="getnews">Get News</label>
+            </div>
+            <select class="form-select mb-3" aria-label="myselect">
+              <option selected>Please select Pat</option>
+              <option value="cat">Cat</option>
+              <option value="dog">Dog</option>
+              <option value="hamster">Hamster</option>
+            </select>
+            <div class="mb-3">
+              <label for="descr" class="form-label">Describe</label>
+              <textarea class="form-control" id="descr" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+          </form>
+        </div>
       </div>
       <div class="row">
-        <div class="col-12">Footer</div>
+        <div class="col-12">
+          <div class="text-primary p-3">By someone</div>
+        </div>
       </div>
     </div>
 
