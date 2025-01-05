@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="bg-gray-300">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     <title>My Tailwind</title>
   </head>
   <body>
-    <header class="flex bg-gray-300 md:justify-start justify-between items-center gap-6">
+    <header class="flex md:justify-start justify-between items-center gap-6 p-1">
       <img src="src/images/logo.svg" alt="logo" class="w-[60px] h-[60px]">
       <nav class="md:block hidden">
         <ul class="flex gap-4 justify-start">
@@ -19,10 +19,47 @@
         </ul>
       </nav>
       <div class="md:hidden">
-        <svg class="w-[40px] h-[40px] text-gray-800 dark:text-white rotate-90" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+        <svg class="w-[40px] h-[40px] text-white rotate-90" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
           <path fill-rule="evenodd" d="M15 4H9v16h6V4Zm2 16h3a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3v16ZM4 4h3v16H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" clip-rule="evenodd"/>
         </svg>
       </div>
     </header>
+    <main class="mt-1 md:flex md:justify-between">
+      <div class="md:w-1/4 bg-red-200 p-2"><p>Beneath the shimmering canopy of a starlit sky, a lone traveler wandered through an endless desert of golden sand. Each grain sparkled like a tiny jewel, reflecting the brilliance of the moon above. The air was cool and carried the faint scent of distant rain, a promise of life in an otherwise barren expanse.
+
+        In the distance, a faint glow emerged—an oasis, perhaps, or a mirage born of fatigue. Driven by curiosity and hope, the traveler pressed on, footsteps leaving ephemeral trails that the wind eagerly claimed. As the glow grew nearer, the sound of water rippling gently filled the air, and the silhouette of a solitary tree came into focus.
+
+        It was not just an oasis but a sanctuary, untouched by the sands of time. And there, beneath the ancient tree, the traveler found something more valuable than water or shade—a moment of stillness, a reminder of the beauty hidden within life's most unexpected places.</p></div>
+      <div class="md:w-1/2 bg-blue-400 p-2">The wind whispered through the ancient forest, carrying with it secrets from a world long forgotten. Leaves, golden and crimson, danced in spirals, creating a symphony of color against the fading light of dusk. A narrow path wound its way through the trees, its edges softened by moss and scattered petals.
+
+        Along this path, a young girl walked, her boots crunching on the damp earth. In her hand, she carried a lantern that flickered with an otherworldly blue light. It wasn’t an ordinary lantern—it was a guide, a gift from her grandmother, meant to lead her to places unseen by ordinary eyes.
+
+        Ahead, the trees parted to reveal a glistening lake, its surface so still it looked like a mirror. On the far side stood a solitary figure cloaked in shadows, waiting. The girl paused, her heart racing not with fear but with the thrill of the unknown.
+
+        “Come closer,” the figure called, their voice as soft as the wind yet filled with the weight of a thousand stories.
+
+        And so, she stepped forward, her lantern glowing brighter with each step, illuminating the beginning of a journey that would change her life forever.</div>
+      <div class="md:w-1/4 bg-lime-300 p-2"><p>The clock in the corner ticked softly, its rhythmic sound blending with the faint hum of the fluorescent lights overhead. In the small, cluttered room, an old typewriter sat on a wooden desk, its keys worn smooth from decades of use. A single sheet of paper was loaded, waiting for words to spill across it like a whispered confession.
+
+        Outside the rain fell in a gentle drizzle, painting the world in shades of gray. The streets glistened, reflecting the golden glow of streetlights and the blurred colors of passing cars. Somewhere in the distance, a dog barked, its voice echoing briefly before fading into the quiet night.
+
+        Inside, the writer hesitated, fingers hovering over the keys. Inspiration was a fickle companion, sometimes a torrent and other times a desert. But tonight, something stirred—a fragment of a story, a spark of an idea. With a deep breath, the first letter struck the page, followed by another, and another.
+
+        And so, the story began.</p></div>
+    </main>
+    <footer class="p-1 flex justify-start gap-3">
+      <a href="#"><svg class="w-[33px] h-[33px] text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+        <path fill-rule="evenodd" d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z" clip-rule="evenodd"/>
+      </svg></a>
+      <a href="#"><svg class="w-[33px] h-[33px] text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+        <path fill-rule="evenodd" d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z" clip-rule="evenodd"/>
+        <path d="M7.2 8.809H4V19.5h3.2V8.809Z"/>
+      </svg>
+      </a>
+      <a href="#"><svg class="w-[33px] h-[33px] text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"/>
+      </svg>
+      </a>
+    </footer>
   </body>
 </html>
