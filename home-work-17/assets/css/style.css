@@ -537,6 +537,9 @@ html{
   padding-bottom:94px;
   margin-bottom:90px;
 }
+.main__features-container{
+  margin-bottom:150px;
+}
 .main__features-container--feature{
   display:-webkit-box;
   display:-ms-flexbox;

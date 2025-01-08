@@ -157,6 +157,9 @@ html {
     padding-bottom: 94px;
     margin-bottom: 90px;
   }
+  &__features-container{
+    margin-bottom: 150px;
+  }
   &__features-container--feature {
     @include displayFlex_al_center();
     justify-content: space-between;
