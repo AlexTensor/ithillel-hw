@@ -5,7 +5,8 @@ $main-fontColor: #000000;
 $button-color: #FF6336;
 $button-text-color: #ffffff;
 $header-border-color: #CCCCCC;
-$orange-cont-color: #FF9C7D;
+$primary-cont-color: #FF9C7D;
+$secondary-cont-color: #FFF8E4;
 @mixin container-Padding() {
   padding-inline: 20px
 }
@@ -49,11 +50,14 @@ html {
 .container{
   max-width: min(1330px, 100% - 20px);
   margin-inline: auto;
-  border: 1px solid black;
+  //border: 1px solid black;
   @include container-Padding();
 }
 .orange-container {
-  background-color: $orange-cont-color;
+  background-color: $primary-cont-color;
+}
+.beige-container {
+  background-color: $secondary-cont-color;
 }
 
 .header {
@@ -159,31 +163,48 @@ html {
   }
   &__features-container{
     margin-bottom: 150px;
-  }
-  &__features-container--feature {
-    @include displayFlex_al_center();
-    justify-content: space-between;
-    margin-bottom: 250px;
-    &:last-child {
-      margin-bottom: 0;
+    &--feature {
+      @include displayFlex_al_center();
+      justify-content: space-between;
+      margin-bottom: 250px;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
-  }
-  &__features-container--description{
-    width: 500px;
-    h2 {
-      @include header2Temlate();
-      margin-bottom: 51px;
-    }
-    p {
-      margin-bottom: 30px;
-    }
-    a {
-      @include regular-Font();
-      font-weight: 600;
-      &:hover {
-        text-decoration: underline;
-        color: $button-color;
+    &--description {
+      width: 500px;
+      h2 {
+        @include header2Temlate();
+        margin-bottom: 51px;
+      }
+      p {
+        margin-bottom: 30px;
+        span {
+          text-decoration: underline;
+        }
+      }
+      a {
+        @include regular-Font();
+        font-weight: 600;
+        &:hover {
+          text-decoration: underline;
+          color: $button-color;
+        }
       }
     }
   }
+
+  .beige-container {
+    padding-top: 120px;
+    padding-bottom: 150px;
+  }
+
+  &__can-you {
+    h2 {
+      @include header2Temlate();
+      text-align: center;
+    }
+
+  }
+
 }

@@ -357,12 +357,15 @@ html{
 .container{
   max-width:min(1330px, 100% - 20px);
   margin-inline:auto;
-  border:1px solid black;
   padding-inline:20px;
 }
 
 .orange-container{
   background-color:#FF9C7D;
+}
+
+.beige-container{
+  background-color:#FFF8E4;
 }
 
 .header{
@@ -567,6 +570,9 @@ html{
 .main__features-container--description p{
   margin-bottom:30px;
 }
+.main__features-container--description p span{
+  text-decoration:underline;
+}
 .main__features-container--description a{
   font-family:"Graphik LCG", sans-serif;
   color:#000000;
@@ -576,4 +582,14 @@ html{
 .main__features-container--description a:hover{
   text-decoration:underline;
   color:#FF6336;
+}
+.main .beige-container{
+  padding-top:120px;
+  padding-bottom:150px;
+}
+.main__can-you h2{
+  font-size:50px;
+  font-weight:600;
+  line-height:60px;
+  text-align:center;
 }
