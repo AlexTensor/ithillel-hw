@@ -1,0 +1,186 @@
+@import "fonts";
+@import "reset";
+$main-font: 'Graphik LCG', sans-serif;
+$main-fontColor: #000000;
+$button-color: #FF6336;
+$button-text-color: #ffffff;
+$header-border-color: #CCCCCC;
+$orange-cont-color: #FF9C7D;
+@mixin container-Padding() {
+  padding-inline: 20px
+}
+@mixin regular-Font() {
+  font-family: $main-font;
+  color: $main-fontColor;
+  text-decoration: none;
+}
+@mixin displayFlex_al_center() {
+  display: flex;
+  align-items: center;
+}
+@mixin displayFlex_al_end() {
+  display: flex;
+  align-items: end;
+}
+@mixin buttons() {
+  @include regular-Font();
+  border-radius: 0;
+  font-weight: 600;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background: transparent;
+  font-size: 16px;
+  transition: transform ease 0.5s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+@mixin header2Temlate() {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 60px;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  @include regular-Font();
+  font-size: 20px;
+}
+.container{
+  max-width: min(1330px, 100% - 20px);
+  margin-inline: auto;
+  border: 1px solid black;
+  @include container-Padding();
+}
+.orange-container {
+  background-color: $orange-cont-color;
+}
+
+.header {
+  border-bottom: 1px solid $header-border-color;
+  padding-block: 25px;
+  .container {
+    @include displayFlex_al_center();
+    justify-content: space-between;
+    padding-inline: 0;
+  }
+  .navwrap {
+    @include displayFlex_al_center();
+    gap: 52px
+  }
+  &__nav {
+    ul {
+      @include displayFlex_al_center();
+      gap: 58px;
+      a {
+        @include regular-Font();
+        font-size: 15px;
+        &:hover {
+          text-decoration: underline;
+          color: $button-color;
+        }
+      }
+    }
+  }
+  &__buttons {
+    @include displayFlex_al_center();
+    gap: 10px;
+    &--login {
+      @include buttons();
+      width: 120px;
+      height: 45px;
+    }
+    &--tryit {
+      @extend .header__buttons--login;
+      border: none;
+      background: $button-color;
+      color: $button-text-color;
+    }
+  }
+}
+.main {
+  padding-top: 115px;
+  &__acc_container {
+    @include displayFlex_al_end();
+    justify-content: space-between;
+    margin-bottom: 172px;
+  }
+  &__acc {
+    h1 {
+      font-size: 65px;
+      font-weight: 600;
+      line-height: 70px;
+      margin-bottom: 51px;
+    }
+    &-par{
+      font-size: 25px;
+      width: 475px;
+      margin-bottom: 51px;
+    }
+    &-buttons {
+      @include displayFlex_al_center();
+      gap: 10px;
+      &--demo {
+        @include buttons();
+        width: 160px;
+        height: 60px;
+      }
+      &--tryit {
+        @extend .main__acc-buttons--demo;
+        border: none;
+        background: $button-color;
+        color: $button-text-color;
+      }
+      margin-bottom: 25px;
+    }
+    &-message {
+      font-size: 15px;
+    }
+  }
+  &__loc-header {
+    @include header2Temlate();
+    width: 720px;
+    margin-inline: auto;
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  &__loc-brand-logos {
+    @include displayFlex_al_center();
+    justify-content: space-around;
+
+    img {
+      display: block;
+    }
+  }
+  .orange-container {
+    padding-top: 108px;
+    padding-bottom: 94px;
+    margin-bottom: 90px;
+  }
+  &__features-container--feature {
+    @include displayFlex_al_center();
+    justify-content: space-between;
+    margin-bottom: 250px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__features-container--description{
+    width: 500px;
+    h2 {
+      @include header2Temlate();
+      margin-bottom: 51px;
+    }
+    p {
+      margin-bottom: 30px;
+    }
+    a {
+      @include regular-Font();
+      font-weight: 600;
+      &:hover {
+        text-decoration: underline;
+        color: $button-color;
+      }
+    }
+  }
+}
