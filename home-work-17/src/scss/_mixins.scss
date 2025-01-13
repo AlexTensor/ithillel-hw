@@ -1,0 +1,33 @@
+@mixin container-Padding() {
+  padding-inline: 20px
+}
+@mixin regular-Font() {
+  font-family: $main-font;
+  color: $main-fontColor;
+  text-decoration: none;
+}
+@mixin displayFlex_al_center() {
+  display: flex;
+  align-items: center;
+}
+@mixin displayFlex_al_end() {
+  display: flex;
+  align-items: end;
+}
+@mixin buttons() {
+  @include regular-Font();
+  border-radius: 0;
+  font-weight: 600;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background: transparent;
+  font-size: 16px;
+  transition: transform ease 0.5s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+@mixin header2Temlate() {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 60px;
+}
