@@ -211,5 +211,148 @@
         }
       }
     }
+    &__rate {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+    &__rate-description {
+
+      border: none;
+      p {
+        margin-right: 20px;
+        width: 100%;
+      }
+    }
+    &__rate-items {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    &__integrate-image {
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    &__integrate{
+      padding-top: 50px;
+      padding-bottom: 50px;
+      h2 {
+        width: 100%;
+        font-size: 40px;
+        line-height: 50px;
+      }
+      p{
+        font-size: 20px;
+        width: 100%
+      }
+    }
+    &__easy-local {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    h2 {
+      font-size: 40px;
+      width: 100%;
+      line-height: 50px;
+    }
+  }
+  footer {
+    .footer__links {
+      flex-direction: column;
+      gap: 20px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+
+      &--item-left {
+        justify-content: center;
+      }
+    }
+
+  }
+}
+@media (max-width: $tablet) {
+  footer {
+    .footer__secondary {
+      flex-wrap: wrap;
+      gap: 20px;
+      &--right {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+@media (max-width: $mobile) {
+  html {
+    overflow-y: auto;
+  }
+  .header {
+    &__buttons {
+      &--login {
+        display: none;
+      }
+      &--tryit {
+        display: none;
+      }
+    }
+  }
+  .main {
+    &__review-comment {
+      p:first-of-type {
+        font-size: 16px;
+      }
+    }
+    &__boost {
+      h2 {
+        font-size: 25px;
+        line-height: 30px;
+      }
+    }
+    &__acc {
+      h1 {
+        width: 100%;
+      }
+      &-par{
+        width: 100%;
+      }
+      &-buttons {
+        flex-direction: column;
+        &--demo {
+          width: 100px;
+          height: 40px;
+          font-size: 12px;
+        }
+        &--tryit {
+          width: 100px;
+          height: 40px;
+        }
+
+      }
+    }
+    &__rate-description {
+      img {
+        display: none;
+      }
+      p {
+        margin-right: 0;
+      }
+    }
+    &__easy-local {
+      h2{
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+  }
+  footer {
+    .footer__links--item-left {
+      img[alt="cyclist"] {
+        display: none;
+      }
+      p{
+        width: 100%;
+      }
+    }
+
   }
 }
