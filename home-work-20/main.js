@@ -163,7 +163,8 @@ console.log(weekFn('2')) // null
 function ageClassification(n) {
     if(n <= 0 || n > 122) {
         return null;
-    }else if (n > 0 && n <= 24) {
+    }
+    if (n > 0 && n <= 24) {
         return 'Дитинство';
     }else if (n > 24 && n <= 44) {
         return 'Молодість';
@@ -250,10 +251,12 @@ console.log('   150 :', ageClassification(150)) // 150 : null
 
 function oddFn(count) {
     const resultArray = [];
-    for(let i = 1; i <= count; i++) {
-        if(i % 2 !== 0) {
-            resultArray.push(i);
+    let iter = 1;
+    while (count >= iter) {
+        if(iter % 2 !== 0) {
+            resultArray.push(iter);
         }
+        iter = iter + 1;
     }
     return resultArray;
 }
@@ -293,7 +296,7 @@ function cbAdd(a, b) {
 }
 
 function mainFunc(a, b, cb) {
-    if (cb === 'not a func') {
+    if (typeof cb !== 'function') {
         return false;
     }
 
