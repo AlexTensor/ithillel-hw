@@ -17,9 +17,7 @@ export function average(mixed) {
 
 export function showDeepArray(deep){
     if(Array.isArray(deep)){
-        deep.forEach(elem => {
-            showDeepArray(elem);
-        });
+        deep.forEach(elem => showDeepArray(elem));
     }else {
         console.log(deep);
     }
