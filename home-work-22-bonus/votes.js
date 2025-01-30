@@ -1,0 +1,82 @@
+/*
+  Создать функцию, которая создает объект опросов - голосовалок.
+  Принимает массив опций для голосования. Возвращает объект.
+
+  Метод vote() принимает опцию. Если опция существует, поднимает ее счетчик на 1. Возвращает текущее количество голосов.
+  Если опции нет, возвращает текст Vote option Internet Explorer doesn't exist
+
+  Метод showVotes() выводит текущие результаты в виде оции и звездочек. Такой себе псевдо-график.
+  Звездочки должны начинаться с одной линии, чтобы можно было оценить, кто кого обогнал
+
+  Метод iterate принимает коллбек и выполняет его для каждой опции.
+  коллбек вызывается с двумя параметрами: название опции и количество голосов
+
+ */
+
+function createPoll(voteList) {
+  const voteObj = voteList.reduce((acc, cur) => {
+    acc[cur.toLowerCase()] = 0
+    return acc;
+  }, {});
+  function vote(text) {
+    if(text.toLowerCase() in voteObj) {
+      voteObj[text.toLowerCase()] = voteObj[text.toLowerCase()] += 1;
+      return voteObj[text.toLowerCase()];
+    }else{
+      return "Vote option Internet Explorer doesn't exist"
+    }
+  }
+  function showVotes() {
+    const keysLength = Object.keys(voteObj).map(el => el.length);
+    const maxKeyLengh = Math.max.apply(null, keysLength);
+    for(const key in voteObj) {
+      const spaceCount = maxKeyLengh - key.length + 1;
+      console.log(`${key}${' '.repeat(spaceCount)}${'*'.repeat(voteObj[key])}`);
+    }
+  }
+  function iterate(callback){
+    for(const key in voteObj) {
+      callback(key, voteObj[key]);
+    }
+  }
+  return {
+    vote,
+    showVotes,
+    iterate
+  }
+}
+
+const poll = createPoll(['chrome', 'firefox', 'OPERA', 'safari', 'edge']);
+
+console.log(poll.vote('chrome'));
+console.log(poll.vote('chrome'));
+console.log(poll.vote('chrome'));
+console.log(poll.vote('CHROME'));
+console.log(poll.vote('Chrome'));
+console.log(poll.vote('firefox'));
+console.log(poll.vote('firefox'));
+console.log(poll.vote('FIREFOX'));
+console.log(poll.vote('opera'));
+console.log(poll.vote('edge'));
+console.log(poll.vote('Internet Explorer'));
+
+poll.showVotes();
+/*
+  chrome  *****
+  firefox ***
+  opera   *
+  safari
+  edge    *
+ */
+
+poll.iterate((option, count) => {
+  console.log(`${option} -> ${count}`);
+});
+
+/*
+  chrome -> 5
+  firefox -> 3
+  opera -> 1
+  safari -> 0
+  edge -> 1
+ */
