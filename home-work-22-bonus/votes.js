@@ -15,7 +15,7 @@
 
 function createPoll(voteList) {
   const voteObj = voteList.reduce((acc, cur) => {
-    acc[cur.toLowerCase()] = 0
+    acc[cur.toLowerCase()] = 0;
     return acc;
   }, {});
   function vote(text) {
@@ -24,15 +24,14 @@ function createPoll(voteList) {
       voteObj[textKey] = voteObj[textKey] += 1;
       return voteObj[textKey];
     }else{
-      return `Vote option ${textKey} doesn't exist`
+      return `Vote option ${textKey} doesn't exist`;
     }
   }
   function showVotes() {
     const keysLength = Object.keys(voteObj).map(el => el.length);
     const maxKeyLengh = Math.max.apply(null, keysLength);
     Object.keys(voteObj).forEach((key) => {
-      const spaceCount = maxKeyLengh - key.length + 1;
-      console.log(`${key}${' '.repeat(spaceCount)}${'*'.repeat(voteObj[key])}`);
+      console.log(`${key.padEnd(maxKeyLengh, ' ')} ${'*'.repeat(voteObj[key])}`);
     })
   }
   function iterate(callback){
