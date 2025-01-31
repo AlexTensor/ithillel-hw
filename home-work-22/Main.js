@@ -148,7 +148,7 @@ console.log(counterFactory.value()) // 201
 // const myMax = () => {}
 const list = [12, 23, 100, 34, 56, 9, 233];
 const myMax = list => {
-    return Math.max.apply(Math, list);
+    return Math.max.apply(null, list);
 }
 
  console.log(myMax(list)); // 233
@@ -171,10 +171,7 @@ const myMul = (a, b) => {
  * Функція повертає результат обчислення.
  */
 
-const myDouble = a => {
-    const double = myMul.bind(null,2, a);
-    return double();
-}
+const myDouble = myMul.bind(null, 2);
 
 
 console.log(myDouble(3), myMul(2, 3)) // = myMul(2, 3) = 6
@@ -186,10 +183,7 @@ console.log(myDouble(5), myMul(2, 5)) // = myMul(2, 5) = 10
 
 // Аналогічним чином створюємо функцію myTriple(n), яка потроює параметр, що приймає, повертаючи результат.
 
-const myTriple = (a) => {
-    const triple = myMul.bind(null,3, a);
-    return triple();
-}
+const myTriple = myMul.bind(null, 3);
 
 console.log(myTriple(3), myMul(3, 3))
 console.log(myTriple(4), myMul(3, 4))
