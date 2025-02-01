@@ -1,3 +1,5 @@
+'use strict'
+import {Hamburger} from './Hamburger.js'
 /*
 Мережа фастфудів пропонує кілька видів гамбургерів:
   маленький (50 тугриків, 20 калорій);
@@ -31,7 +33,7 @@ console.log('Calories: ', hamburger.calculate ());
 console.log('Price: ', hamburger.calculatePrice());
 
 // я тут передумав і вирішив додати ще приправу
-hamburger.addTopping(Hamburger .TOPPING_SAUCE);
+hamburger.addTopping(Hamburger.TOPPING_SAUCE);
 
 // А скільки тепер коштує?
 console.log('Price with sauce: ', hamburger.calculatePrice());
