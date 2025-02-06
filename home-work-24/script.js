@@ -88,11 +88,14 @@ function checkBalance(amount, list) {
   return list.filter(el => convertAmountToNumber(el.balance) < amount);
 }
 
+
+
+
 console.log(checkBalance(2000, users));
 
 function totalAmount(list){
   const total = list.reduce((acc, el) => acc + convertAmountToNumber(el.balance), 0);
-  return Math.floor(total * 100) / 100;
+  return Number(total.toFixed(2));
 }
 
 console.log(totalAmount(users));
@@ -123,6 +126,11 @@ function getNameSakes(list){
 }
 
 console.log(getNameSakes(users));
+
+// const repeatingUserNameFilter = (user, index, users) => {
+//   return users.findIndex(  (indexUser) => indexUser.name === user.name  ) !== index
+// };
+// console.log(users.filter(repeatingUserNameFilter));
 
 function convertAmountToNumber(amount) {
   return parseFloat(amount.replace('$', '').replace(',', ''));
