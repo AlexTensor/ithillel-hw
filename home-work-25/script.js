@@ -59,7 +59,7 @@ function setLocalStorageInfo(key, value, timeout) {
   if(timeout){
     setTimeout(() => {
       localStorage.removeItem(key);
-    }, timeout * 100);
+    }, timeout * 1000);
   }
 }
 
