@@ -67,7 +67,7 @@ function setupEventDelegation(selector) {
   const listElement = document.querySelector(selector);
   listElement.addEventListener('click', (event) => {
       if(event.target.tagName.toLowerCase() === 'li'){
-          console.log(event.target.innerHTML.trim());
+          console.log(`Item clicked: ${event.target.innerHTML.trim()}`);
       }
   });
 }
