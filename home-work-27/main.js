@@ -83,7 +83,7 @@ function playPauseEvent(event) {
 }
 
 function moveSliderEvent(event, action) {
-    console.log(event)
+
     if (event instanceof TouchEvent) {
         if(action === 'left') {
             currentSlide += 1;
