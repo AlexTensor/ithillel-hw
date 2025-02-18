@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
 }
 .slider__container{
@@ -66,4 +66,3 @@
     transform: scale(1.2);
     background: #ffd6d6;
 }
-
