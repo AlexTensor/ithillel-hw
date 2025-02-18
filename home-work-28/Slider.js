@@ -5,7 +5,7 @@ export class Slider {
     touchendX = 0;
     isPlaying = false;
     constructor(params) {
-        if(!Array.isArray(params.images) || !params.images.length || !params.width || !params.height) {
+        if(!Array.isArray(params.images) || !params.images.length || !params.width || !params.height || !params.sliderId) {
             throw new Error("Invalid parameters");
         }
         this.images = params.images;
