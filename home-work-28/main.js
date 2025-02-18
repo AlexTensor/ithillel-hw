@@ -21,6 +21,5 @@ new Slider({
     images: myFistSliderImages,
     width: 854,
     height: 480,
-    animationSpeed: 0,
     sliderId: 'myFistSlider2',
 });
