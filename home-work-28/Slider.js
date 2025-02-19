@@ -60,7 +60,7 @@ export class Slider {
         sliderNav.appendChild(rightBtn);
         sliderMainContainer.appendChild(sliderNav);
         if(this.animationSpeed){
-            sliderContainer.setAttribute('style', `transition: transform ${this.animationSpeed}s;`);
+            sliderContainer.style.transition = `transform ${this.animationSpeed}s`;
         }
     }
     addEvents(){
