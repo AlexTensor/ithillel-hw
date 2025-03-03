@@ -94,7 +94,7 @@ console.log(evenFn(20)) // [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 /*
  * #5
  *
- * Створіть функцію weekFn(n), яка приймає номер дня тижня, а повертає його назву.
+ * Створіть функцію weekFn.js(n), яка приймає номер дня тижня, а повертає його назву.
  * Якщо вводиться рядок, будь-яке дробове число або число поза діапазоном 1...7 - функція повинна повернути null.
  *
  * Наприклад:
@@ -136,12 +136,12 @@ console.log(weekFn(9))   // null
 console.log(weekFn(1.5)) // null
 console.log(weekFn('2')) // null
 
-// console.log(weekFn(1))   // 'Понеділок'
-// console.log(weekFn(3))   // 'Середа'
-// console.log(weekFn(7))   // 'Неділя'
-// console.log(weekFn(9))   // null
-// console.log(weekFn(1.5)) // null
-// console.log(weekFn('2')) // null
+// console.log(weekFn.js(1))   // 'Понеділок'
+// console.log(weekFn.js(3))   // 'Середа'
+// console.log(weekFn.js(7))   // 'Неділя'
+// console.log(weekFn.js(9))   // null
+// console.log(weekFn.js(1.5)) // null
+// console.log(weekFn.js('2')) // null
 
 /*
  * #6
