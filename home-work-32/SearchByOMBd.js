@@ -31,7 +31,6 @@ export class SearchByOMBd {
                             `;
                     }else{
                         const moviesList = movieData['Search'];
-                        console.log(moviesList)
                         movieResultContainer.innerHTML = this.genMoviesList(moviesList);
                     }
                 }
