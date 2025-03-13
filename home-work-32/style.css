@@ -1,0 +1,37 @@
+.inputcont {
+    width: 30%;
+}
+.movieItem {
+    width: 20%;
+}
+.movieItem img {
+    height: 350px;
+}
+
+@media screen and (max-width: 1200px) {
+    .movieItem {
+        width: calc(100% / 3);
+    }
+    .inputcont {
+        width: 50%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .movieItem {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .movieItem {
+        width: 100%;
+    }
+    .movieItem img {
+        height: auto;
+    }
+}
+
+
+

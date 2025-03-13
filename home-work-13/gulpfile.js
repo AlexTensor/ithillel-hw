@@ -33,7 +33,7 @@ const option = process.argv[3]
 const PATH = {
   scssFolder: './src/scss/',
   scssAllFiles: ['./src/scss/**/*.scss', '!**/_mixins-media.scss'], // Виключаємо _mixins-media.scss
-  scssRootFile: './src/scss/style.scss',
+  scssRootFile: './src/scss/style.css',
   pugFolder: './src/templates/',
   pugAllFiles: './src/templates/**/*.pug',
   pugRootFile: './src/templates/index.pug',
