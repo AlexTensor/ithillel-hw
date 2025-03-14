@@ -1,42 +1,47 @@
 export class SearchByOMBd {
     #apiKey = 'a82916e2';
-    URL_BASE = `http://www.omdbapi.com/`;
+    BASE_URL = `http://www.omdbapi.com/`;
     #keyParam = `?apikey=${this.#apiKey}&`;
     currentTimeOut = null;
+    timeoutValue = 1000;
 
     constructor(searchSelector, containerSelector) {
         this.searchSelector = searchSelector;
         this.containerSelector = containerSelector;
-        this.searchAction();
+        this.initSearchAction();
     }
 
-    searchAction() {
+    initSearchAction() {
+        const input = document.getElementById(this.searchSelector);
+        input.addEventListener('keydown',  this.onSearchKeyDown.bind(this));
+    }
+
+    onSearchKeyDown () {
+        clearTimeout(this.currentTimeOut);
+        this.currentTimeOut = setTimeout(this.updateResults.bind(this), this.timeoutValue);
+    }
+    async updateResults () {
         const input = document.getElementById(this.searchSelector);
         const movieResultContainer = document.getElementById(this.containerSelector);
-        input.addEventListener('keydown',  (event) => {
-            clearTimeout(this.currentTimeOut);
-            this.currentTimeOut = setTimeout(async () => {
-                const inputValue = input.value.trim();
-                if(!inputValue){
-                    movieResultContainer.innerHTML = '';
-                    return;
-                }
-                if(inputValue.length > 2){
-                    movieResultContainer.innerHTML = this.getSpinnerHtml();
-                    const movieData = await this.sendOMBdRequest(inputValue);
-                    if(movieData[`Response`] === 'False'){
-                        movieResultContainer.innerHTML =
-                            `
+        const inputValue = input.value.trim();
+        if(!inputValue){
+            movieResultContainer.innerHTML = '';
+            return;
+        }
+        if(inputValue.length > 2){
+            movieResultContainer.innerHTML = this.getSpinnerHtml();
+            const movieData = await this.sendOMBdRequest(inputValue);
+            if(movieData[`Response`] === 'False'){
+                movieResultContainer.innerHTML =
+                    `
                               <h2 class="text-center">Movie not Found :(</h2>
                             `;
-                    }else{
-                        const moviesList = movieData['Search'];
-                        movieResultContainer.innerHTML = this.genMoviesList(moviesList);
-                    }
-                }
+            }else{
+                const moviesList = movieData.Search;
+                movieResultContainer.innerHTML = this.genMoviesList(moviesList);
+            }
+        }
 
-            }, 1000);
-        })
     }
 
     genMoviesList(moviesList) {
@@ -47,9 +52,9 @@ export class SearchByOMBd {
         moviesList.forEach(movie => {
             html += `
                 <div class="movieItem p-3">
-                    <img alt="poster" class="w-100" src="${movie['Poster']}">
-                    <h3 class="text-center">${movie['Title']}</h3>
-                    <p class="text-center">Year: ${movie['Year']} / Type: ${movie['Type']}</p>
+                    <img alt="poster" class="w-100" src="${movie.Poster}">
+                    <h3 class="text-center">${movie.Title}</h3>
+                    <p class="text-center">Year: ${movie.Year} / Type: ${movie.Type}</p>
                 </div>
             `
         });
@@ -83,7 +88,7 @@ export class SearchByOMBd {
     }
 
     async sendOMBdRequest (value) {
-        return  await fetch(`${this.URL_BASE}${this.#keyParam}s=${value}`)
+        return  await fetch(`${this.BASE_URL}${this.#keyParam}s=${value}`)
             .then(res => res.json());
     }
 
