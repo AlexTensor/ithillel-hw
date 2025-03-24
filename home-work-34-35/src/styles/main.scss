@@ -1,0 +1,10 @@
+$bg-color: lightgray;
+*{
+  box-sizing: border-box;
+}
+body {
+  background: $bg-color;
+}
+img {
+  width: 500px;
+}
