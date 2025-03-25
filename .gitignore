@@ -3,3 +3,4 @@
 *.zip
 node_modules/
 dist/
+src/stats.json
