@@ -57,14 +57,14 @@ var OrderStatus;
     OrderStatus["Delivered"] = "Delivered";
     OrderStatus["Cancelled"] = "Cancelled";
 })(OrderStatus || (OrderStatus = {}));
-const statusObj = {
-    Pending: 'Замовлення очікує на обробку',
-    Shipped: 'Замовлення було відправлено',
-    Delivered: 'Замовлення доставлено',
-    Cancelled: 'Замовлення скасовано'
+const statusesTexts = {
+    [OrderStatus.Pending]: 'Замовлення очікує на обробку',
+    [OrderStatus.Shipped]: 'Замовлення було відправлено',
+    [OrderStatus.Delivered]: 'Замовлення доставлено',
+    [OrderStatus.Cancelled]: 'Замовлення скасовано'
 };
 function getOrderStatus(orderStatus) {
-    return statusObj[orderStatus];
+    return statusesTexts[orderStatus];
 }
 console.log(getOrderStatus(OrderStatus.Pending));
 console.log(getOrderStatus(OrderStatus.Shipped));

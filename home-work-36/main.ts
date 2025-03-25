@@ -85,23 +85,16 @@ enum OrderStatus {
     Cancelled = 'Cancelled'
 }
 
-type Status = {
-    Pending: string,
-    Shipped: string,
-    Delivered: string,
-    Cancelled: string,
-}
-
-const statusObj: Status = {
-    Pending: 'Замовлення очікує на обробку',
-    Shipped: 'Замовлення було відправлено',
-    Delivered: 'Замовлення доставлено',
-    Cancelled: 'Замовлення скасовано'
+const statusesTexts: Record<OrderStatus, string> = {
+    [OrderStatus.Pending]: 'Замовлення очікує на обробку',
+    [OrderStatus.Shipped]: 'Замовлення було відправлено',
+    [OrderStatus.Delivered]: 'Замовлення доставлено',
+    [OrderStatus.Cancelled]: 'Замовлення скасовано'
 }
 
 
 function getOrderStatus(orderStatus: OrderStatus): string {
-    return statusObj[orderStatus];
+    return statusesTexts[orderStatus];
 }
 
 
