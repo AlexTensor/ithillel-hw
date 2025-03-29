@@ -20,9 +20,9 @@ interface ISearchByOMBd {
 }
 
 export class SearchByOMBd implements ISearchByOMBd {
-    private apiKey = 'a82916e2';
-    public BASE_URL = `http://www.omdbapi.com/`;
-    private keyParam = `?apikey=${this.apiKey}&`;
+    private apiKey: string = 'a82916e2';
+    public BASE_URL: string = `http://www.omdbapi.com/`;
+    private keyParam: string = `?apikey=${this.apiKey}&`;
     public currentTimeOut: undefined | number = undefined;
     public timeoutValue: number = 1000;
     public searchSelector: string;
