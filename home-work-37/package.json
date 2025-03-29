@@ -1,0 +1,15 @@
+{
+  "name": "home-work-36",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "watch" : "npx tsc -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  }
+}
