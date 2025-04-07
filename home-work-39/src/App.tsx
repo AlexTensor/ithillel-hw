@@ -1,11 +1,12 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+import "reset-css"
 import {JSX} from "react";
 import moment from "moment";
 import SiteHeader from "./components/SiteHeader.tsx";
 import EmployeesDashboard from "./components/EmployeesDashboard.tsx";
 
-// // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// // @ts-expect-error
-// import "reset-css"
+
 
 function App(): JSX.Element {
 
