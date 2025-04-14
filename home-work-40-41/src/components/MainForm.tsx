@@ -1,6 +1,6 @@
 import '../styles/mainForm.scss'
 import React, {JSX, useEffect, useRef} from "react";
-import {searchUser} from "../apps/searchUser.ts";
+import {searchUser} from "../api/searchUser.ts";
 import {Employee} from "../interfaces/interfaces.ts";
 
 function MainForm({employeeSet, setSearchValue}:{employeeSet: any, setSearchValue: any}): JSX.Element {
