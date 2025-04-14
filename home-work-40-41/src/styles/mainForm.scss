@@ -1,0 +1,14 @@
+@import 'vars';
+.mainForm {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-block: 40px ;
+  input {
+    font-size: $main-font-size;
+  }
+
+  button {
+    font-size: $main-font-size;
+  }
+}
