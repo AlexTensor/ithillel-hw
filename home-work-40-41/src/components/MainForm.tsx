@@ -13,16 +13,15 @@ function MainForm({employeeSet, setSearchValue}:{employeeSet: any, setSearchValu
         }
     }
 
-    async function getEmployees() {
-        const result = await searchUser(input.current.value);
-        console.log(result);
-//        employeeSet(result)
+    async function getEmployees(): Promise<void> {
+        const result: Employee[] = await searchUser(input.current.value);
+        employeeSet(result)
     }
 
     useEffect(() => {
         setSearchValue((searchValue: string): string => input.current.value = searchValue);
         getEmployees()
-    })
+    }, [])
 
     return (
       <>
